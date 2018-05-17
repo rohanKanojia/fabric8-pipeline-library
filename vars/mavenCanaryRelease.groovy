@@ -99,17 +99,17 @@ def patchFMPVersion() {
 
             // check FMP plugin definition has '<version>' property
             // else update FMP plugin definition <version> property according to <parent> version
-            if (plugin.version) {
-                if (compareVersions(plugin.version, FMP_STABLE_VERSION) < 0) {
-                    println "patching maven plugin for fabric8-maven-plugin v" + FMP_STABLE_VERSION
-                    plugin.version = FMP_STABLE_VERSION
-                    updatedPlugin = true
-                } else {
-                    return false
-                }
-            } else {
-                updatedPlugin = patchPluginBasedOnParent(plugin, pomModel.parent)
-            }
+//            if (plugin.version) {
+//                if (compareVersions(plugin.version, FMP_STABLE_VERSION) < 0) {
+//                    println "patching maven plugin for fabric8-maven-plugin v" + FMP_STABLE_VERSION
+//                    plugin.version = FMP_STABLE_VERSION
+//                    updatedPlugin = true
+//                } else {
+//                    return false
+//                }
+//            } else {
+//                updatedPlugin = patchPluginBasedOnParent(plugin, pomModel.parent)
+//            }
         }
     }
 
